@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#content{
+			width: 500px;
+			height: 500px;
+			margin: 100px auto;
+			position: relative;  
+		}
+		#face1,#face2{
+			width: 500px;
+			height: 500px;
+			background:url(1.jpg) no-repeat;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			border: #666 solid 1px;
+			border-radius: 50%;
+		}
+		#face2{
+			background: url(2.jpg) no-repeat;
+			transform-origin:bottom;
+			transition: all 0.5s; 
+		}
+		#content:hover #face2{
+			transform: rotateX(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="face1"></div>
+		<div id="face2"></div>
+	</div>
+</body>
+</html>
